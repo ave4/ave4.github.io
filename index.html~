@@ -11,6 +11,8 @@
     <p>
         <a href="easygg/index.html">EasyGG - gui для git</a>
       </p>
+    <a href="easygg/index.html" name="EasyGG - gui для git">
+    </a>
       <a href="https://loffice.ucoz.ru">
         <img src="img/Win2k.png" width="400" height="300" alt="linux office">
       </a>
