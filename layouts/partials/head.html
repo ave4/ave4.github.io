@@ -1,0 +1,29 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<link rel="icon" href="/favicon.png" />
+
+{{ $title := print .Title " | " .Site.Title }}
+{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+<title>{{ $title }}</title>
+
+{{ $css := resources.Get "global.out.css" }}
+{{ $style := $css | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+
+
+{{ if not .Site.Config.Privacy.GoogleAnalytics.Disable }}
+{{ with .Site.GoogleAnalytics -}}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}" data-turbo-track="reload"></script>
+{{ end }}
+{{ else }}
+{{ end }}
+
+{{ $opts := dict "params" (dict "ga" .Site.Config.Services.GoogleAnalytics) }}
+{{ $turbo := resources.Get "turbo.js" | js.Build $opts | minify | fingerprint }}
+<script src="{{ $turbo.RelPermalink }}" defer></script>
+
+{{ $js := resources.Get "tailwindcss.js" | js.Build | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+
+{{ template "_internal/opengraph.html" . }}
