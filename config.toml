@@ -1,8 +1,8 @@
-baseURL = 'https://rusos.net'
+baseURL = 'https://ave4.github.io'
 languageCode = 'ru-ru'
 defaultContentLanguage = 'ru'
-title = 'Rusos.net - Русскоговорящие в Уругвае'
-googleAnalytics = "G-RWR8YM3FLL"
+title = 'Rusanto - Легкий русский язык'
+googleAnalytics = ""
 
 [params]
   dateFormat = "Jan 2, 2006"
