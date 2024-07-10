@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: sans;
   font-weight: normal;
   font-style: normal;
 }
@@ -112,7 +112,7 @@ header {
   height:200px;
 }
 .blk_text{
-  font-size: 25px;
+  font-size: 2em;
 }
 .main ul{
   padding: 16px;
