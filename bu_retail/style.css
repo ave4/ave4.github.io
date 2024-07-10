@@ -1,0 +1,134 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+.header-area .logo {
+  /*float: left;*/
+  display: inline-block;
+}
+.header-area .main-menu {
+  float: right;
+  text-align: center;
+  padding: 12px 0;
+  display: inline-block;
+  margin-left: 15vw;
+}
+.header-area .main-menu ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 20px;
+}
+.header-area .main-menu ul li a {
+  color: #000000;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: inline-block;
+  padding: 0px 0px 0px 0px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  text-transform: capitalize;
+}
+/* Анимация подменю шапки*/
+.header-area .main-menu ul li .submenu {
+  position: absolute;
+  left: 0;
+  top: 160%;
+  background: #1ff09f;
+  width: 200px;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+  opacity: 0;
+  visibility: hidden;
+  text-align: left;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.header-area .main-menu ul li .submenu li {
+  display: block;
+}
+/* оформление подменю */
+.header-area .main-menu ul li .submenu li a {
+  padding: 10px 15px;
+  position: inherit;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: block;
+  color: #f00000;
+}
+
+.header-area .main-menu ul li .submenu li a::before {
+  display: none;
+}
+
+.header-area .main-menu ul li .submenu li:hover a {
+  color: #0000ff;
+}
+.header-area .main-menu ul li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  top: 150%;
+}
+.header-area .main-menu ul li:hover > a::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.header-area {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+header {
+  display: inline-block;
+}
+.block_con {
+  display: flex;
+  flex-wrap: wrap;
+}
+.block_con .m_block{
+  padding: 10px;
+  margin: 10px;
+  background: #eefff1;
+  flex: 200px;
+  transition: 0.2s;
+}
+.block_con .m_block:hover{
+  transform: translate(-8px, -14px);
+}
+.blk_img{
+  width:auto;
+  height:200px;
+}
+.blk_text{
+  font-size: 25px;
+}
+.main ul{
+  padding: 16px;
+}
+footer {
+  background-color: #2e34e5;
+  right: 0;
+  bottom: 0;
+  text-align: center; 
+  width: 100%;   
+  font-size: 19px;
+  font-weight: bold;
+  color: #fafaff;  
+ }
+footer ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 20px;
+}
