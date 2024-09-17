@@ -22,19 +22,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate index tree
-        run: cd "$INPUT_PATH" && tree -H '.' -L 2 --noreport --charset utf-8 > index.html
-      - name: Install Node.js dependencies
-        run: cd "$INPUT_PATH" && ls -l
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-            path: index.html
-
   # Single deploy job since we're just deploying
   deploy:
     environment:
@@ -46,6 +33,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Generate index tree
+        run: tree -H '.' -L 2 --noreport --charset utf-8 > index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
