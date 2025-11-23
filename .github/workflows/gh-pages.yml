@@ -59,6 +59,7 @@ jobs:
       - name: Build with Hugo
         run: |
           hugo \
+            -s 'blog' \
             --buildDrafts --gc \
             --baseURL ${{ steps.pages.outputs.base_url }}
       - name: Generate index tree
